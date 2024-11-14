@@ -4,14 +4,30 @@ import axios from "axios";
 const Predict = () => {
   const [symbol, setSymbol] = useState("");
   const [prediction, setPrediction] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null); // New state for error message
 
   const handleSubmit = async () => {
+    setErrorMessage(null); // Reset the error message on new submission
+    setPrediction(null); // Reset prediction on new submission
+
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", {
-        symbol,
-      });
-      setPrediction(response.data.prediction);
+      const response = await axios.post(
+        "https://smartstocksmlmodel.onrender.com/predict",
+        {
+          symbol,
+        }
+      );
+      if (response.data && response.data.error) {
+        // Handle specific error from Alpha Vantage
+        setErrorMessage(response.data.error);
+      } else {
+        setPrediction(response.data.prediction);
+      }
     } catch (error) {
+      // Handle general network error
+      setErrorMessage(
+        "Thank you for using Alpha Vantage! Our standard API rate limit is 25 requests per day"
+      );
       console.error("Error fetching prediction:", error);
     }
   };
@@ -40,12 +56,19 @@ const Predict = () => {
             >
               Get Prediction
             </button>
+            {errorMessage && (
+              <div className="flex justify-center w-full">
+                <p className="text-sm font-semibold text-red-600 w-10/12 leading-10 text-center">
+                  {errorMessage}
+                </p>
+              </div>
+            )}
             {prediction && (
               <div className="flex justify-center w-full">
-                <p className=" text-sm font-bold text-gray-600 w-10/12 leading-10 text-center">
+                <p className="text-sm font-bold text-gray-600 w-10/12 leading-10 text-center">
                   Predicted Stock Price for <br />
-                  <span className="text-green-500 text-semibold max-lg:text-xl  text-2xl ">
-                    {symbol}: ${prediction}{" "}
+                  <span className="text-green-500 text-semibold max-lg:text-xl text-2xl">
+                    {symbol}: ${prediction}
                   </span>
                 </p>
               </div>
