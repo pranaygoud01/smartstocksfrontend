@@ -16,7 +16,7 @@ const UserLogin = () => {
     e.preventDefault();
     try {
       const { data: res } = await axios.post(
-        "http://localhost:8000/api/auth",
+        "https://smartstocksbackend.onrender.com/api/auth",
         data
       );
       localStorage.setItem("token", res.data);

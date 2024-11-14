@@ -18,7 +18,7 @@ const UserRegister = () => {
     e.preventDefault();
     try {
       const { data: res } = await axios.post(
-        "http://localhost:8000/api/users",
+        "https://smartstocksbackend.onrender.com/api/users",
         data
       );
 
