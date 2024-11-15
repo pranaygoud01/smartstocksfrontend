@@ -100,8 +100,89 @@ const Stocks = () => {
             ))}
           </div>
         ) : (
-          <div className="flex justify-center items-center h-[400px] ">
-            <h1 className="font-bold text-3xl text-gray-400">Loading...</h1>
+          <div className="w-[1200px] max-lg:w-full h-fit  max-lg:p-5">
+            <div className="grid grid-cols-3 max-lg:grid-cols-2  max-lg:gap-4 gap-10 cursor-pointer ">
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+              <div className="flex w-70 max-lg:w-40 flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="skeleton h-16 w-16 max-lg:h-12 max-lg:w-12 shrink-0 rounded-full"></div>
+                  <div className="flex flex-col gap-4">
+                    <div className="skeleton h-4 w-20 max-lg:w-12"></div>
+                    <div className="skeleton h-4 w-28 max-lg:w-16"></div>
+                  </div>
+                </div>
+                <div className="skeleton h-40 w-full"></div>
+              </div>
+            </div>
           </div>
         )}
       </div>

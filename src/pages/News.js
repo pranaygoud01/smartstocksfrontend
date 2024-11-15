@@ -137,7 +137,7 @@ const News = () => {
         ) : (
           <div className="flex justify-center h-fit w-full">
             <div className="w-[1200px] flex justify-center items-center h-[400px]">
-              <h1 className="text-3xl font-bold text-gray-400">Loading....</h1>
+              <progress className="progress w-56 max-lg:w-40"></progress>
             </div>
           </div>
         )}
